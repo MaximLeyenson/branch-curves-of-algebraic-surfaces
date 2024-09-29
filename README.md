@@ -1,6 +1,4 @@
-#Branch curves of cubic surfaces
-
-Branch curves of some cubic surfaces
+# Branch curves of some cubic surfaces
 
 (This documentation will be improved)
 
@@ -10,13 +8,13 @@ sextic". It has six cuspidal points, all of them on a conic; but,
 paradoxically, the same number of parameters (moduli) as any plane
 sextic with six cusps, without any conditions on a conic.
 
-It also has a large fundamental group of the complement (PSL(2,Z));
+For the geometric introduction,  please see a separate file 
+[Geometric introduction](zariski-sextic.2d/Geometric-Notes.smooth-cubic-surface.md)
+
+This curve has a large fundamental group of the complement (PSL(2,Z));
 (this was an intriguing discovery of Oscar Zariski); 
 much larger than in the case of a plane sextic with six cusps not on a
 conic (in which this is abelian of order six).
-
-For a geometric introduction,  please see a separate file 
-[Geometric introduction](zariski-sextic.2d/Geometric-Notes.smooth-cubic-surface.md)
 
 * The second script demonstrates the  branch curve of (a generic projection of) a 
 cubic surface with a double line. 

@@ -1,0 +1,1 @@
+/home/leyenson/code/branch-curves-of-algebraic-surfaces/zariski-sextic.2d/Geometric-Notes.smooth-cubic-surface.md
