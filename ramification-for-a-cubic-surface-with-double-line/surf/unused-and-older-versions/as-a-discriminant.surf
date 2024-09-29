@@ -1,0 +1,45 @@
+
+// a = x;
+// 
+// b = b0 * x + b1 * y + b2 * w;
+// 
+// c = c0 * x + c1 * y + c2 * w;
+// 
+// Deltoid = a^2*b^2-4*a^3*c-4*b^3*w+18*a*b*c*w-27*c^2*w^2
+// 
+// ---------------------------------------------------------------------- 
+// 
+// now, changing y -> 1
+//               w -> y:
+
+
+double c1 = 0;
+double c2 = 0;
+double c0 = 1/27;
+
+double b0 = 0;
+double b2 = 1/6;
+double b1 = - 1/6;
+
+poly a = x;
+
+poly b = b0 * x + b1 * 1 + b2 * y;
+
+poly c = c0 * x + c1 * 1 + c2 * y;
+
+curve = a^2*b^2-4*a^3*c-4*b^3*y+18*a*b*c*y-27*c^2*y^2 ;
+
+// curve = x^2 + y^2 - 1;
+
+width = 400;
+height=400;
+
+scale_x=1/6; // scale <1 -- zoom
+scale_y=1/6;
+
+curve_width=1.0;
+
+draw_curve;
+color_file_format = jpg;        
+filename = "deltoid.jpg";         // need file extension in Ubuntu's version
+save_color_image;              

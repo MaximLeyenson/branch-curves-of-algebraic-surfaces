@@ -1,0 +1,11 @@
+
+poly circle = x^2 + y^2 - 1;
+
+double a = sqrt(3)/2;
+poly cubic = y - 5 * (x^3 - a^2 * x);
+
+poly sextic = circle^3 + cubic^2;   // sign plus
+
+// R = 1.5
+
+

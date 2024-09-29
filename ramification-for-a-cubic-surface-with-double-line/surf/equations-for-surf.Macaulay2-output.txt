@@ -1,0 +1,15 @@
+-- this is Macaulay 2 output file;
+-- Macaulay 2 code will be posted separately
+
+--  pure ramification curve (isomorphic to a deltoid) 
+-- of the cubic surface with a double line 
+
+Daffine =  - 16 * x^4 + 11 * x^2 * y^2 - 2 * y^4 - 18 * x^2 * y + 6 * y^3 + 3 * x^2 - 6 * y^2 + 2 * y
+
+--  Ideal of the double line
+
+l = y
+
+--  full ramification curve, D  +  double line: 
+
+fullRamificationAffine =  - 16 * x^4 * y + 11 * x^2 * y^3 - 2 * y^5 - 18 * x^2 * y^2 + 6 * y^4 + 3 * x^2 * y - 6 * y^3 + 2 * y^2

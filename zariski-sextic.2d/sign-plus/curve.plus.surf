@@ -1,0 +1,105 @@
+// this is a code in surf programming language
+
+// the discriminant of the cubic surface 
+// 
+//   z^3 − 3 a z + b = 0,
+//
+// is given by the discriminant 
+// 
+//    ∆(f) = b^2 − 4 a^3,
+// 
+// but we scale 'a' so that the discriminant is given by
+//
+//    b^2 − a^3 = 0.
+//
+// of course, by substituting 'a' -> '-a', it might be natural to
+// consider the curve b^2 + a^3 = 0 at the same time.
+
+//  --- geometry -----
+
+poly circle = x^2 + y^2 - 1;
+
+double c = sqrt(3)/2;
+
+poly cubic = y - 5 * (x^3 - c^2 * x);
+
+// poly sextic = circle^3 - cubic^2;   
+
+poly sextic = circle^3 + cubic^2;   // will do in the next program
+
+
+// ---------------------------------------------------------------------- 
+// --- -- graphics parameters ---
+
+curve_width = 1;
+
+double R = 3.0;  
+
+double sf = R/10;
+    // surf's internal scale factor is defined this way
+
+    // intended quare of size [-R, +R] on the (x,y) - plane
+
+    // R = 3.0 works well for "-" 
+    // R = 1.5 works well for "+" 
+
+scale_x= sf;
+scale_y= sf;
+
+width=400;
+height=400;
+
+
+// ---------------------------------------------------------------------- 
+// -------- drawing the curve -----------
+
+clear_screen;
+
+// -- drawing circle
+
+// white 
+curve_red=255;
+curve_green=255;
+curve_blue=255;
+
+// blue
+// curve_red=0;
+// curve_green=0;
+// curve_blue=255;
+
+curve = circle;
+// draw_curve;
+
+// -- drawing cubic 
+
+curve_red=0;
+// curve_green=255;
+curve_green=0;
+curve_blue=255;
+
+// curve= cubic;
+// draw_curve;     
+
+// curve= circle * cubic ;
+// draw_curve;     
+
+// -- drawing sextic and quadric
+
+// white 
+curve_red=255;
+curve_green=255;
+curve_blue=255;
+
+// curve= circle * cubic * sextic;
+// curve= circle * sextic;
+// draw_curve;     
+
+// -- drawing sextic 
+curve= sextic;
+draw_curve;     
+
+color_file_format = jpg;
+// filename = "quadric-and-cubic-and-sextic.jpg";
+// filename = "quadric-and-sextic.plus.jpg";
+filename = "sextic.plus.jpg";
+save_color_image;
